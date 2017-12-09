@@ -21,12 +21,25 @@
     _titles = @[].mutableCopy;
     _controllers = @[].mutableCopy;
     [self addCell:@"导航栏pop动画及全屏侧滑返回" class:@"JCNavigationDemo"];
+    [self addCell:@"UI皮肤 Demo" class:@"JCSRootController"];
+    [self addCell:@"UI链式编程" class:@"JCChainViewController"];
     [self.tableView reloadData];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"ic_setting"] originalImage] style:UIBarButtonItemStylePlain target:self action:@selector(skinSetup)];
 }
 
 - (void)addCell:(NSString *)title class:(NSString *)className {
     [_titles addObject:title];
     [_controllers addObject:className];
+}
+
+- (void)skinSetup {
+    NSString *className = @"JCSkinSetupController";
+    Class class = NSClassFromString(className);
+    if (class) {
+        UIViewController *ctrl = class.new;
+        [self.navigationController pushViewController:ctrl animated:YES];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,6 +66,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell.theme_backgroundColor = [UIColor whiteColor];
+        cell.textLabel.theme_textColor = nil;
     }
     cell.textLabel.text = _titles[indexPath.row];
     return cell;

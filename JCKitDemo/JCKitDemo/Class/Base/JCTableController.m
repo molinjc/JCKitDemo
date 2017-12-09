@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _tableView = [[UITableView alloc] init];
+    _tableView.theme_backgroundColor = [UIColor whiteColor];
     _tableView.frame = self.view.bounds;
     _tableView.delegate = self;
     _tableView.dataSource = self;

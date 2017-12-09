@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.theme_backgroundColor = [UIColor whiteColor];
 }
 
 - (void)dealloc {

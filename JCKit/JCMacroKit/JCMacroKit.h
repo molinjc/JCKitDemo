@@ -213,6 +213,8 @@ static inline id _JCBoxValue(const char *type, ...) {
     return obj;
 }
 
+/** 将任意数据转换成字符串 */
+#define JCValueTypeBuilder(value) valueTypeBuilder(@encode(__typeof__(value)), (__typeof__(value) []){value})
 
 FOUNDATION_EXPORT double JCMacroKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char JCMacroKitVersionString[];

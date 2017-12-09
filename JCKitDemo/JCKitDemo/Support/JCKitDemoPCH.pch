@@ -18,5 +18,9 @@
 #import "UIView+JCLayout.h"
 /** 导航栏扩展 */
 #import "UINavigationController+JCExtension.h"
+/** 皮肤设置 */
+#import "UIView+JCTheme.h"
+/** 富文本 */
+#import "JCAttributed.h"
 
 #endif /* JCKitDemoPCH_pch */

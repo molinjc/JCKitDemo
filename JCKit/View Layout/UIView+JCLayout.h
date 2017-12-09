@@ -46,7 +46,7 @@
 #pragma mark - 参照父视图属性
 
 /** left，相当于x，参照俯视图的NSLayoutAttributeLeft */
-@property (nonatomic, weak, readonly) UIView  *(^layoutLeft)(CGFloat layoutLeft);
+@property (nonatomic, weak, readonly) UIView *(^layoutLeft)(CGFloat layoutLeft);
 
 /** right，与俯视图右边的间距，参照俯视图的NSLayoutAttributeRight */
 @property (nonatomic, weak, readonly) UIView *(^layoutRight)(CGFloat layoutRight);

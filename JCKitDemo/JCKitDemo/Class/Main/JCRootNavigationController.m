@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.theme_backgroundColor = [UIColor whiteColor];
+    self.navigationBar.theme_barTintColor = [UIColor whiteColor];
+    self.navigationBar.theme_tintColor = [UIColor blueColor];
 }
 
 @end

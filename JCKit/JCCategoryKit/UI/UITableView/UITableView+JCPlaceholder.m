@@ -62,10 +62,7 @@
 }
 
 - (void)tableViewReload {
-    NSLog(@"tableViewReload");
-    if (self.tableViewReloadBlock) {
-        self.tableViewReloadBlock();
-    }
+    if (self.tableViewReloadBlock) { self.tableViewReloadBlock(); }
 }
 
 @end
@@ -89,17 +86,13 @@
     });
 }
 
-/**
- reloadData
- */
+/** reloadData */
 - (void)jc_reloadData {
     [self checkEmpty];
     [self jc_reloadData];
 }
 
-/**
- 检查数据是否为空
- */
+/** 检查数据是否为空 */
 - (void)checkEmpty {
     BOOL isEmpty = YES;  //flag标示
     
@@ -111,9 +104,7 @@
     
     for (NSInteger i = 0; i <= sections; i++) {
         NSInteger rows = [dataSource tableView:self numberOfRowsInSection:i];//获取当前TableView各组行数
-        if (rows) {
-            isEmpty = NO;//若行数存在，不为空
-        }
+        if (rows) { isEmpty = NO;} //若行数存在，不为空
     }
     
     if (!self.customPlaceholderView) {
