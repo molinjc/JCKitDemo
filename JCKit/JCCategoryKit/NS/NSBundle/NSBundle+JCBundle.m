@@ -9,30 +9,22 @@
 
 @implementation NSBundle (JCBundle)
 
-/**
- 最小适配的系统版本
- */
 - (NSString *)minimumOSVersion {
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"MinimumOSVersion"];
 }
 
-/**
- 项目名
- */
 - (NSString *)bundleName {
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
 }
 
-/**
- 项目版本号
- */
+- (NSString *)displayName {
+    return [self objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+}
+
 - (NSString *)bundleShortVersionString {
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 }
 
-/**
- 项目的Icon文件
- */
 - (NSString *)bundleIconFile {
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIconFile"];
 }

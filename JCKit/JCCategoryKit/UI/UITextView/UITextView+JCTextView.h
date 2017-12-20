@@ -9,19 +9,13 @@
 
 @interface UITextView (JCTextView)
 
-/**
- 选中所有文字
- */
+/** 选中所有文字 */
 - (void)selectAllText;
 
-/**
- 当前选中的字符串范围
- */
+/** 当前选中的字符串范围 */
 - (NSRange)currentSelectedRange;
 
-/**
- 选中指定范围的文字
- */
+/** 选中指定范围的文字 */
 - (void)setSelectedRange:(NSRange)range;
 
 @end

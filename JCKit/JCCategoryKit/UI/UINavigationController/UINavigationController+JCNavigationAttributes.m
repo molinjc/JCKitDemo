@@ -67,9 +67,9 @@
 }
 
 /**  隐藏navigationBar下的横线 */
-- (UINavigationController *(^)(void))navigationBarHiddenLine {
-    return ^() {
-        self.navigationBar.shadowImage = [UIImage new];
+- (UINavigationController *(^)(BOOL))navigationBarHiddenLine {
+    return ^(BOOL hidden) {
+        self.navigationBarLine.hidden = hidden;
         return self;
     };
 }
@@ -88,6 +88,28 @@
         [self setNavigationBarHidden:hidden animated:animated];
         return self;
     };
+}
+
+- (UIImageView *)_navigationBarLineWithView:(UIView *)view {
+    if ([view isKindOfClass:UIImageView.class] && view.bounds.size.height <= 1.0) {
+        return (UIImageView *)view;
+    }
+    for (UIView *subview in view.subviews) {
+        UIImageView *imageView = [self _navigationBarLineWithView:subview];
+        if (imageView) {
+            return imageView;
+        }
+    }
+    return nil;
+}
+
+- (UIImageView *)navigationBarLine {
+    UIImageView *line = objc_getAssociatedObject(self, _cmd);
+    if (!line) {
+        line = [self _navigationBarLineWithView:self.navigationBar];
+        objc_setAssociatedObject(self, _cmd, line, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    return line;
 }
 
 #pragma mark - Push

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define _colorObject(value) [UIColor colorWithColorObject:value]
+#define COLOR(value) [UIColor colorWithColorObject:value]
 
 #define _colorRGR(r, g, b) _colorRGRA(r, g, b, 1)
 #define _colorRGRA(r, g, b, a) [UIColor colorWithRGB:{r, g, b, a}]

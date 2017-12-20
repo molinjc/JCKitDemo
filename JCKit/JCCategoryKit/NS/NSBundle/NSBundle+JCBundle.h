@@ -9,24 +9,19 @@
 
 @interface NSBundle (JCBundle)
 
-/**
- 最小适配的系统版本
- */
+/** 最小适配的系统版本 */
 - (NSString *)minimumOSVersion;
 
-/**
- 项目名
- */
+/** 项目名 */
 - (NSString *)bundleName;
 
-/**
- 项目版本号
- */
+/** APP的名称 */
+- (NSString *)displayName;
+
+/** 项目版本号 */
 - (NSString *)bundleShortVersionString;
 
-/**
- 项目的Icon文件
- */
+/** 项目的Icon文件 */
 - (NSString *)bundleIconFile;
 
 @end

@@ -46,6 +46,13 @@
     };
 }
 
+- (UIButton *(^)(UIFont *))fontSet {
+    return ^(UIFont *font) {
+        self.titleLabel.font = font;
+        return self;
+    };
+}
+
 - (UIButton *(^)(NSAttributedString *))attributedTitleSet {
     return ^(NSAttributedString *attibutedString) {
         self.attributedTitleOrStateSet(attibutedString,UIControlStateNormal);

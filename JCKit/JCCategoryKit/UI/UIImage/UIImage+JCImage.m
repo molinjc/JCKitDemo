@@ -193,6 +193,10 @@ static NSArray * _scaleArray() {
     return colorImage;
 }
 
++ (UIImage *)imageWithColor:(UIColor *)color {
+    return [self imageWithColor:color size:CGSizeMake(100, 100)];
+}
+
 /** 灰度图片 */
 - (UIImage*)grayImage {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
@@ -403,9 +407,18 @@ static NSArray * _scaleArray() {
     return [UIImage imageWithCGImage:image.CGImage scale:scale orientation:orientation];
 }
 
-/** 设置图片方向 */
 - (UIImage *)orientation:(UIImageOrientation)orientation {
     return [UIImage imageWithCGImage:self.CGImage scale:self.scale orientation:orientation];
+}
+
+- (UIImage *)orientationUp {
+    if (self.imageOrientation == UIImageOrientationUp) return self;
+    
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
+    [self drawInRect:(CGRect){0, 0, self.size}];
+    UIImage *normalizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return normalizedImage;
 }
 
 /** 水平翻转 */
@@ -610,11 +623,11 @@ CGFloat _JCDegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;}
     NSDictionary *frameProperties = (__bridge NSDictionary *)cfFrameProperties;
     NSDictionary *gifProperties = frameProperties[(NSString *)kCGImagePropertyGIFDictionary];
     NSNumber *delayTimeUnclampedProp = gifProperties[(NSString *)kCGImagePropertyGIFUnclampedDelayTime];
-    if (delayTimeUnclampedProp) {
+    if (delayTimeUnclampedProp != nil) {
         frameDuration = [delayTimeUnclampedProp floatValue];
     } else {
         NSNumber *delayTimeProp = gifProperties[(NSString *)kCGImagePropertyGIFDelayTime];
-        if (delayTimeProp) {
+        if (delayTimeProp != nil) {
             frameDuration = [delayTimeProp floatValue];
         }
     }
@@ -665,6 +678,18 @@ CGFloat _JCDegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;}
     CGImageRelease(scaledImage);
     CGImageRelease(bitmapImage);
     return reusult;
+}
+
++ (UIImage *)QRCodeImageWithString:(NSString *)string size:(CGFloat)size image:(UIImage *)image {
+    UIImage *QRCodeImage = [self QRCodeImageWithString:string size:size];
+    if (!image) { return QRCodeImage; }
+    CGRect rect = CGRectMake((QRCodeImage.size.width - image.size.width) * 0.5, (QRCodeImage.size.height - image.size.height) * 0.5, image.size.width, image.size.height);
+    UIGraphicsBeginImageContext(QRCodeImage.size);
+    [QRCodeImage drawInRect:CGRectMake(0, 0, QRCodeImage.size.width, QRCodeImage.size.height)];
+    [image drawInRect:rect];
+    UIImage *resulImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return resulImage;
 }
 
 /** 二维码图片内容信息 */

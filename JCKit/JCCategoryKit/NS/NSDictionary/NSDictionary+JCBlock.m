@@ -32,7 +32,7 @@ NSLog(@"\n1️⃣%@\n2️⃣%@\n3️⃣%@",exception.name,exception.reason,mainC
 @implementation NSDictionary (JCBlock)
 
 + (void)load {
-    swizzledClassMethod([self class], @selector(dictionaryWithObjects:forKeys:count:), @selector(avoidCrashDictionaryWithObjects:forKeys:count:));
+//    swizzledClassMethod([self class], @selector(dictionaryWithObjects:forKeys:count:), @selector(avoidCrashDictionaryWithObjects:forKeys:count:));
 }
 
 /**
@@ -274,9 +274,9 @@ _Dictionary_GET_VALUE(char, charValue, 0)
 @implementation NSMutableDictionary (JCBlock)
 
 + (void)load {
-    Class dictionaryMClass = NSClassFromString(@"__NSDictionaryM");
-    swizzledMethod(dictionaryMClass, @selector(setObject:forKey:), @selector(avoidCrashSetObject:forKey:));
-    swizzledMethod(dictionaryMClass, @selector(removeObjectForKey:), @selector(avoidCrashRemoveObjectForKey:));
+//    Class dictionaryMClass = NSClassFromString(@"__NSDictionaryM");
+//    swizzledMethod(dictionaryMClass, @selector(setObject:forKey:), @selector(avoidCrashSetObject:forKey:));
+//    swizzledMethod(dictionaryMClass, @selector(removeObjectForKey:), @selector(avoidCrashRemoveObjectForKey:));
 }
 
 /**

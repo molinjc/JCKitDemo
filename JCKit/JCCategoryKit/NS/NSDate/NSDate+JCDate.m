@@ -195,5 +195,29 @@
     return date;
 }
 
+#pragma mark - 
+
+- (NSDate *)dateByAddingYear:(NSInteger)year month:(NSInteger)month {
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setYear:year];
+    [components setMonth:month];
+    return [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:self options:0];
+}
+
+- (NSDate *)lastMonth {
+    return [self dateByAddingYear:0 month:-1];
+}
+
+- (NSDate *)nextMonth {
+    return [self dateByAddingYear:0 month:1];
+}
+
+- (NSDate *)lastYear {
+    return [self dateByAddingYear:-1 month:0];
+}
+
+- (NSDate *)nextYear {
+    return [self dateByAddingYear:1 month:0];
+}
 
 @end

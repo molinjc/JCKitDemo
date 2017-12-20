@@ -74,4 +74,14 @@
 /** 追加秒数，生成新的NSDate */
 + (NSDate *)dateByAddingTimeInterval:(NSTimeInterval)ti;
 
+/** year=1表示1年后的时间 year=-1为1年前的日期，month day 类推 */
+- (NSDate *)dateByAddingYear:(NSInteger)year month:(NSInteger)month;
+/** 上一个月 */
+- (NSDate *)lastMonth;
+/** 下一个月 */
+- (NSDate *)nextMonth;
+/** 上一年 */
+- (NSDate *)lastYear;
+/** 下一年 */
+- (NSDate *)nextYear;
 @end

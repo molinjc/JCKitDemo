@@ -32,16 +32,16 @@ NSLog(@"\n1️⃣%@\n2️⃣%@\n3️⃣%@",exception.name,exception.reason,mainC
 @implementation NSArray (JCBlock)
 
 + (void)load {
-    // 类方法的交换
-    Method sysMethod = class_getClassMethod([self class], @selector(arrayWithObjects:count:));
-    Method cusMethod = class_getClassMethod([self class], @selector(avoidCrashArrayWithObjects:count:));
-    method_exchangeImplementations(sysMethod, cusMethod);
-    
-    // 对象方法的交换
-    Class arrayIClass = NSClassFromString(@"__NSArrayI");
-    Method sysIMethod = class_getInstanceMethod(arrayIClass, @selector(objectAtIndex:));
-    Method cusIMethod = class_getInstanceMethod(arrayIClass, @selector(avoidCrashObjectAtIndex:));
-    method_exchangeImplementations(sysIMethod, cusIMethod);
+//    // 类方法的交换
+//    Method sysMethod = class_getClassMethod([self class], @selector(arrayWithObjects:count:));
+//    Method cusMethod = class_getClassMethod([self class], @selector(avoidCrashArrayWithObjects:count:));
+//    method_exchangeImplementations(sysMethod, cusMethod);
+//    
+//    // 对象方法的交换
+//    Class arrayIClass = NSClassFromString(@"__NSArrayI");
+//    Method sysIMethod = class_getInstanceMethod(arrayIClass, @selector(objectAtIndex:));
+//    Method cusIMethod = class_getInstanceMethod(arrayIClass, @selector(avoidCrashObjectAtIndex:));
+//    method_exchangeImplementations(sysIMethod, cusIMethod);
 }
 
 - (void)each:(void (^)(id))block {
@@ -131,18 +131,18 @@ NSLog(@"\n1️⃣%@\n2️⃣%@\n3️⃣%@",exception.name,exception.reason,mainC
 @implementation NSMutableArray (JCBlock)
 
 + (void)load {
-    Class arrayMClass = NSClassFromString(@"__NSArrayM");
-    
-    Method sysMethod_1 = class_getInstanceMethod(arrayMClass, @selector(setObject:atIndex:));
-    Method cusMethod_1 = class_getInstanceMethod(arrayMClass, @selector(avoidCrashSetObject:atIndex:));
-    Method sysMethod_2 = class_getInstanceMethod(arrayMClass, @selector(removeObjectAtIndex:));
-    Method cusMethod_2 = class_getInstanceMethod(arrayMClass, @selector(avoidCrashRemoveObjectAtIndex:));
-    Method sysMethod_3 = class_getInstanceMethod(arrayMClass, @selector(insertObject:atIndex:));
-    Method cusMethod_3 = class_getInstanceMethod(arrayMClass, @selector(avoidCrashInsertObject:atIndex:));
-    
-    method_exchangeImplementations(sysMethod_1, cusMethod_1);
-    method_exchangeImplementations(sysMethod_2, cusMethod_2);
-    method_exchangeImplementations(sysMethod_3, cusMethod_3);
+//    Class arrayMClass = NSClassFromString(@"__NSArrayM");
+//    
+//    Method sysMethod_1 = class_getInstanceMethod(arrayMClass, @selector(setObject:atIndex:));
+//    Method cusMethod_1 = class_getInstanceMethod(arrayMClass, @selector(avoidCrashSetObject:atIndex:));
+//    Method sysMethod_2 = class_getInstanceMethod(arrayMClass, @selector(removeObjectAtIndex:));
+//    Method cusMethod_2 = class_getInstanceMethod(arrayMClass, @selector(avoidCrashRemoveObjectAtIndex:));
+//    Method sysMethod_3 = class_getInstanceMethod(arrayMClass, @selector(insertObject:atIndex:));
+//    Method cusMethod_3 = class_getInstanceMethod(arrayMClass, @selector(avoidCrashInsertObject:atIndex:));
+//    
+//    method_exchangeImplementations(sysMethod_1, cusMethod_1);
+//    method_exchangeImplementations(sysMethod_2, cusMethod_2);
+//    method_exchangeImplementations(sysMethod_3, cusMethod_3);
 }
 
 /**

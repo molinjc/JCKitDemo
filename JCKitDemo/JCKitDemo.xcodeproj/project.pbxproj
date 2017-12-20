@@ -12,10 +12,8 @@
 		25032B931F95C9820070F94C /* JCND2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 25032B921F95C9820070F94C /* JCND2Controller.m */; };
 		25122CF11F94B3C40091B292 /* JCNC1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 25122CF01F94B3C40091B292 /* JCNC1Controller.m */; };
 		25122CF41F94B4100091B292 /* JCNC2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 25122CF31F94B4100091B292 /* JCNC2Controller.m */; };
-		2518178B1FD14EE50092BBEA /* UIView+JCChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2518178A1FD14EE50092BBEA /* UIView+JCChain.m */; };
 		2518178F1FD150F80092BBEA /* JCChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2518178E1FD150F80092BBEA /* JCChainViewController.m */; };
 		251D79D31FA330B800636279 /* JCAttributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 251D79D21FA330B800636279 /* JCAttributed.m */; };
-		251D79DD1FA3341D00636279 /* JCQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 251D79DC1FA3341D00636279 /* JCQRCodeScanView.m */; };
 		25236FE51F945E100064117E /* JCTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25236FE41F945E100064117E /* JCTableController.m */; };
 		25236FE81F945E420064117E /* JCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25236FE71F945E420064117E /* JCNavigationController.m */; };
 		25236FEB1F945F2E0064117E /* JCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25236FEA1F945F2E0064117E /* JCTabBarController.m */; };
@@ -87,6 +85,18 @@
 		25C942851F8CB6E6006E3723 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C942831F8CB6E6006E3723 /* LaunchScreen.storyboard */; };
 		25C942971F8CB81B006E3723 /* JCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C942961F8CB81B006E3723 /* JCViewController.m */; };
 		25F1D7EC1FA7605600C18E7F /* UIView+JCTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F1D7EB1FA7605600C18E7F /* UIView+JCTheme.m */; };
+		25F6136D1FE9454000E58B2D /* JCChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F6136C1FE9454000E58B2D /* JCChain.m */; };
+		25FC15AC1FEAB0440055ACC5 /* JCArchivedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FC15AB1FEAB0440055ACC5 /* JCArchivedModel.m */; };
+		25FC15B21FEAB05E0055ACC5 /* JCClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FC15AF1FEAB05E0055ACC5 /* JCClassInfo.m */; };
+		25FC15B31FEAB05E0055ACC5 /* NSObject+JCJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FC15B11FEAB05E0055ACC5 /* NSObject+JCJSON.m */; };
+		25FC15BE1FEAB08D0055ACC5 /* JCWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FC15BD1FEAB08D0055ACC5 /* JCWeakProxy.m */; };
+		25FC15C31FEAB1280055ACC5 /* JCQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FC15C21FEAB1280055ACC5 /* JCQRCodeScanView.m */; };
+		25FC15C91FEAB15E0055ACC5 /* JCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FC15C71FEAB15E0055ACC5 /* JCToast.m */; };
+		25FC15CA1FEAB15E0055ACC5 /* JCAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FC15C81FEAB15E0055ACC5 /* JCAlertController.m */; };
+		25FC15D01FEAB1B90055ACC5 /* JCImageBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FC15CD1FEAB1B90055ACC5 /* JCImageBrowseView.m */; };
+		25FC15D11FEAB1B90055ACC5 /* UTImageBrowseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FC15CF1FEAB1B90055ACC5 /* UTImageBrowseController.m */; };
+		25FC15D41FEAB2400055ACC5 /* UTAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FC15D31FEAB2400055ACC5 /* UTAlert.m */; };
+		25FC15D71FEAB2630055ACC5 /* UTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FC15D61FEAB2630055ACC5 /* UTTextView.m */; };
 		25FF099A1F9636D600053471 /* JCKA1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FF09991F9636D600053471 /* JCKA1Controller.m */; };
 /* End PBXBuildFile section */
 
@@ -101,14 +111,10 @@
 		25122CF01F94B3C40091B292 /* JCNC1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCNC1Controller.m; sourceTree = "<group>"; };
 		25122CF21F94B4100091B292 /* JCNC2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCNC2Controller.h; sourceTree = "<group>"; };
 		25122CF31F94B4100091B292 /* JCNC2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCNC2Controller.m; sourceTree = "<group>"; };
-		251817891FD14EE50092BBEA /* UIView+JCChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCChain.h"; sourceTree = "<group>"; };
-		2518178A1FD14EE50092BBEA /* UIView+JCChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JCChain.m"; sourceTree = "<group>"; };
 		2518178D1FD150F80092BBEA /* JCChainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCChainViewController.h; sourceTree = "<group>"; };
 		2518178E1FD150F80092BBEA /* JCChainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCChainViewController.m; sourceTree = "<group>"; };
 		251D79D11FA330B800636279 /* JCAttributed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCAttributed.h; sourceTree = "<group>"; };
 		251D79D21FA330B800636279 /* JCAttributed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCAttributed.m; sourceTree = "<group>"; };
-		251D79DB1FA3341D00636279 /* JCQRCodeScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCQRCodeScanView.h; sourceTree = "<group>"; };
-		251D79DC1FA3341D00636279 /* JCQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCQRCodeScanView.m; sourceTree = "<group>"; };
 		25236FE31F945E100064117E /* JCTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTableController.h; sourceTree = "<group>"; };
 		25236FE41F945E100064117E /* JCTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTableController.m; sourceTree = "<group>"; };
 		25236FE61F945E420064117E /* JCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCNavigationController.h; sourceTree = "<group>"; };
@@ -255,6 +261,30 @@
 		25C943701F8CB945006E3723 /* JCKitDemoPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCKitDemoPCH.pch; sourceTree = "<group>"; };
 		25F1D7EA1FA7605600C18E7F /* UIView+JCTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCTheme.h"; sourceTree = "<group>"; };
 		25F1D7EB1FA7605600C18E7F /* UIView+JCTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JCTheme.m"; sourceTree = "<group>"; };
+		25F6136B1FE9454000E58B2D /* JCChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCChain.h; sourceTree = "<group>"; };
+		25F6136C1FE9454000E58B2D /* JCChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCChain.m; sourceTree = "<group>"; };
+		25FC15AA1FEAB0440055ACC5 /* JCArchivedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCArchivedModel.h; sourceTree = "<group>"; };
+		25FC15AB1FEAB0440055ACC5 /* JCArchivedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCArchivedModel.m; sourceTree = "<group>"; };
+		25FC15AE1FEAB05E0055ACC5 /* JCClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCClassInfo.h; sourceTree = "<group>"; };
+		25FC15AF1FEAB05E0055ACC5 /* JCClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCClassInfo.m; sourceTree = "<group>"; };
+		25FC15B01FEAB05E0055ACC5 /* NSObject+JCJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JCJSON.h"; sourceTree = "<group>"; };
+		25FC15B11FEAB05E0055ACC5 /* NSObject+JCJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JCJSON.m"; sourceTree = "<group>"; };
+		25FC15BC1FEAB08D0055ACC5 /* JCWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCWeakProxy.h; sourceTree = "<group>"; };
+		25FC15BD1FEAB08D0055ACC5 /* JCWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCWeakProxy.m; sourceTree = "<group>"; };
+		25FC15C11FEAB1280055ACC5 /* JCQRCodeScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCQRCodeScanView.h; sourceTree = "<group>"; };
+		25FC15C21FEAB1280055ACC5 /* JCQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCQRCodeScanView.m; sourceTree = "<group>"; };
+		25FC15C51FEAB15E0055ACC5 /* JCToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCToast.h; sourceTree = "<group>"; };
+		25FC15C61FEAB15E0055ACC5 /* JCAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCAlertController.h; sourceTree = "<group>"; };
+		25FC15C71FEAB15E0055ACC5 /* JCToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCToast.m; sourceTree = "<group>"; };
+		25FC15C81FEAB15E0055ACC5 /* JCAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCAlertController.m; sourceTree = "<group>"; };
+		25FC15CC1FEAB1B90055ACC5 /* JCImageBrowseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCImageBrowseView.h; sourceTree = "<group>"; };
+		25FC15CD1FEAB1B90055ACC5 /* JCImageBrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCImageBrowseView.m; sourceTree = "<group>"; };
+		25FC15CE1FEAB1B90055ACC5 /* UTImageBrowseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UTImageBrowseController.h; sourceTree = "<group>"; };
+		25FC15CF1FEAB1B90055ACC5 /* UTImageBrowseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTImageBrowseController.m; sourceTree = "<group>"; };
+		25FC15D21FEAB2400055ACC5 /* UTAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UTAlert.h; sourceTree = "<group>"; };
+		25FC15D31FEAB2400055ACC5 /* UTAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTAlert.m; sourceTree = "<group>"; };
+		25FC15D51FEAB2630055ACC5 /* UTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UTTextView.h; sourceTree = "<group>"; };
+		25FC15D61FEAB2630055ACC5 /* UTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTTextView.m; sourceTree = "<group>"; };
 		25FF09981F9636D600053471 /* JCKA1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCKA1Controller.h; sourceTree = "<group>"; };
 		25FF09991F9636D600053471 /* JCKA1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCKA1Controller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -295,8 +325,8 @@
 		251817881FD14ED30092BBEA /* Chain */ = {
 			isa = PBXGroup;
 			children = (
-				251817891FD14EE50092BBEA /* UIView+JCChain.h */,
-				2518178A1FD14EE50092BBEA /* UIView+JCChain.m */,
+				25F6136B1FE9454000E58B2D /* JCChain.h */,
+				25F6136C1FE9454000E58B2D /* JCChain.m */,
 			);
 			path = Chain;
 			sourceTree = "<group>";
@@ -317,15 +347,6 @@
 				251D79D21FA330B800636279 /* JCAttributed.m */,
 			);
 			path = JCAttributed;
-			sourceTree = "<group>";
-		};
-		251D79D41FA3331E00636279 /* QRCode */ = {
-			isa = PBXGroup;
-			children = (
-				251D79DB1FA3341D00636279 /* JCQRCodeScanView.h */,
-				251D79DC1FA3341D00636279 /* JCQRCodeScanView.m */,
-			);
-			path = QRCode;
 			sourceTree = "<group>";
 		};
 		25236FE21F945D6A0064117E /* Main */ = {
@@ -400,6 +421,10 @@
 		25B46B6D1F9856F00026AFAD /* JCKit */ = {
 			isa = PBXGroup;
 			children = (
+				25FC15BF1FEAB0F20055ACC5 /* View */,
+				25FC15BB1FEAB08D0055ACC5 /* Utility */,
+				25FC15AD1FEAB05E0055ACC5 /* Model */,
+				25FC15A91FEAB0440055ACC5 /* Archiver */,
 				251817881FD14ED30092BBEA /* Chain */,
 				25B46C041F9856F00026AFAD /* JCMacroKit */,
 				25B46B6E1F9856F00026AFAD /* JCCategoryKit */,
@@ -408,7 +433,6 @@
 				25B46C081F9856F00026AFAD /* NavigationExtension */,
 				258258441F99E16C00E007E7 /* UISkin */,
 				251D79D01FA330B800636279 /* JCAttributed */,
-				251D79D41FA3331E00636279 /* QRCode */,
 			);
 			name = JCKit;
 			path = ../JCKit;
@@ -1026,6 +1050,80 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		25FC15A91FEAB0440055ACC5 /* Archiver */ = {
+			isa = PBXGroup;
+			children = (
+				25FC15AA1FEAB0440055ACC5 /* JCArchivedModel.h */,
+				25FC15AB1FEAB0440055ACC5 /* JCArchivedModel.m */,
+			);
+			path = Archiver;
+			sourceTree = "<group>";
+		};
+		25FC15AD1FEAB05E0055ACC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25FC15AE1FEAB05E0055ACC5 /* JCClassInfo.h */,
+				25FC15AF1FEAB05E0055ACC5 /* JCClassInfo.m */,
+				25FC15B01FEAB05E0055ACC5 /* NSObject+JCJSON.h */,
+				25FC15B11FEAB05E0055ACC5 /* NSObject+JCJSON.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		25FC15BB1FEAB08D0055ACC5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				25FC15BC1FEAB08D0055ACC5 /* JCWeakProxy.h */,
+				25FC15BD1FEAB08D0055ACC5 /* JCWeakProxy.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		25FC15BF1FEAB0F20055ACC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25FC15D51FEAB2630055ACC5 /* UTTextView.h */,
+				25FC15D61FEAB2630055ACC5 /* UTTextView.m */,
+				25FC15D21FEAB2400055ACC5 /* UTAlert.h */,
+				25FC15D31FEAB2400055ACC5 /* UTAlert.m */,
+				25FC15CB1FEAB1B90055ACC5 /* Image Browse */,
+				25FC15C41FEAB14A0055ACC5 /* Toast */,
+				25FC15C01FEAB11F0055ACC5 /* QRCode */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		25FC15C01FEAB11F0055ACC5 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				25FC15C11FEAB1280055ACC5 /* JCQRCodeScanView.h */,
+				25FC15C21FEAB1280055ACC5 /* JCQRCodeScanView.m */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		25FC15C41FEAB14A0055ACC5 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				25FC15C51FEAB15E0055ACC5 /* JCToast.h */,
+				25FC15C71FEAB15E0055ACC5 /* JCToast.m */,
+				25FC15C61FEAB15E0055ACC5 /* JCAlertController.h */,
+				25FC15C81FEAB15E0055ACC5 /* JCAlertController.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		25FC15CB1FEAB1B90055ACC5 /* Image Browse */ = {
+			isa = PBXGroup;
+			children = (
+				25FC15CC1FEAB1B90055ACC5 /* JCImageBrowseView.h */,
+				25FC15CD1FEAB1B90055ACC5 /* JCImageBrowseView.m */,
+				25FC15CE1FEAB1B90055ACC5 /* UTImageBrowseController.h */,
+				25FC15CF1FEAB1B90055ACC5 /* UTImageBrowseController.m */,
+			);
+			path = "Image Browse";
+			sourceTree = "<group>";
+		};
 		25FF09971F9636B700053471 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -1106,30 +1204,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				251D79DD1FA3341D00636279 /* JCQRCodeScanView.m in Sources */,
+				25FC15C31FEAB1280055ACC5 /* JCQRCodeScanView.m in Sources */,
 				25B46C181F9856F00026AFAD /* NSNumber+JCNumber.m in Sources */,
 				258258431F99CD1100E007E7 /* JCSRootController.m in Sources */,
+				25FC15BE1FEAB08D0055ACC5 /* JCWeakProxy.m in Sources */,
 				25236FF11F94602B0064117E /* JCRootViewController.m in Sources */,
 				25B46C3A1F9856F00026AFAD /* UIViewController+JCViewController.m in Sources */,
 				2523700C1F94721A0064117E /* JCNB1Controller.m in Sources */,
 				25B46C361F9856F00026AFAD /* UITableViewCell+JCSeparator.m in Sources */,
 				25B46C161F9856F00026AFAD /* NSMutableAttributedString+JCAttributedString.m in Sources */,
+				25FC15C91FEAB15E0055ACC5 /* JCToast.m in Sources */,
 				25B46C401F9856F00026AFAD /* UINavigationController+JCExtension.m in Sources */,
 				25B46C381F9856F00026AFAD /* UITextView+JCTextView.m in Sources */,
 				25B46C201F9856F00026AFAD /* JCGraphicsUtilities.m in Sources */,
 				251D79D31FA330B800636279 /* JCAttributed.m in Sources */,
 				25B46C2A1F9856F00026AFAD /* UIFont+JCScale.m in Sources */,
 				25236FEE1F945F6F0064117E /* JCRootNavigationController.m in Sources */,
+				25FC15AC1FEAB0440055ACC5 /* JCArchivedModel.m in Sources */,
 				2582584A1F99E4B600E007E7 /* JCThemeManage.m in Sources */,
 				25B46C2E1F9856F00026AFAD /* UILabel+JCLabel.m in Sources */,
 				25B46C231F9856F00026AFAD /* UIBarItem+JCBarItem.m in Sources */,
 				25B46C261F9856F00026AFAD /* UIColor+JCColor.m in Sources */,
 				25B46C1D1F9856F00026AFAD /* NSURL+JCURL.m in Sources */,
 				25B46C2D1F9856F00026AFAD /* UIImageView+JCImageView.m in Sources */,
+				25FC15D01FEAB1B90055ACC5 /* JCImageBrowseView.m in Sources */,
 				25F1D7EC1FA7605600C18E7F /* UIView+JCTheme.m in Sources */,
 				25B46C251F9856F00026AFAD /* UIButton+JCButton.m in Sources */,
 				25B46C321F9856F00026AFAD /* UIScreen+JCScreen.m in Sources */,
 				25B46C2C1F9856F00026AFAD /* UIImage+JCImage.m in Sources */,
+				25FC15CA1FEAB15E0055ACC5 /* JCAlertController.m in Sources */,
 				25B46C0F1F9856F00026AFAD /* NSBundle+JCBundle.m in Sources */,
 				25032B8A1F9590970070F94C /* JCNA3Controller.m in Sources */,
 				25C942971F8CB81B006E3723 /* JCViewController.m in Sources */,
@@ -1155,21 +1258,25 @@
 				25B46C3C1F9856F00026AFAD /* UIWebView+JCHTML.m in Sources */,
 				25B46C391F9856F00026AFAD /* UIView+JCView.m in Sources */,
 				25B46C241F9856F00026AFAD /* UIBezierPath+JCBezierPath.m in Sources */,
-				2518178B1FD14EE50092BBEA /* UIView+JCChain.m in Sources */,
 				25B46C331F9856F00026AFAD /* UIScrollView+JCScrollView.m in Sources */,
 				25B46C271F9856F00026AFAD /* UIColor+JCSeries.m in Sources */,
 				25B46C1F1F9856F00026AFAD /* CALayer+JCLayer.m in Sources */,
 				25B46C101F9856F00026AFAD /* NSData+JCData.m in Sources */,
 				25B46C1E1F9856F00026AFAD /* CADisplayLink+JCToRunLoop.m in Sources */,
+				25FC15B21FEAB05E0055ACC5 /* JCClassInfo.m in Sources */,
 				25C942771F8CB6E6006E3723 /* main.m in Sources */,
 				25B46C3F1F9856F00026AFAD /* JCKeyboardManager.m in Sources */,
+				25FC15D41FEAB2400055ACC5 /* UTAlert.m in Sources */,
 				25B46C2B1F9856F00026AFAD /* UIGestureRecognizer+JCBlock.m in Sources */,
 				25B46C111F9856F00026AFAD /* NSDate+JCDate.m in Sources */,
 				25236FF51F94624F0064117E /* JCNavigationDemo.m in Sources */,
 				25B46C3D1F9856F00026AFAD /* UIWebView+JCJavaScript.m in Sources */,
+				25FC15D11FEAB1B90055ACC5 /* UTImageBrowseController.m in Sources */,
 				252370081F9470EE0064117E /* JCNA2Controller.m in Sources */,
+				25FC15B31FEAB05E0055ACC5 /* NSObject+JCJSON.m in Sources */,
 				25B46C1B1F9856F00026AFAD /* NSString+JCString.m in Sources */,
 				25B46C0E1F9856F00026AFAD /* NSArray+JCBlock.m in Sources */,
+				25FC15D71FEAB2630055ACC5 /* UTTextView.m in Sources */,
 				25B46C281F9856F00026AFAD /* UIControl+JCControl.m in Sources */,
 				25032B931F95C9820070F94C /* JCND2Controller.m in Sources */,
 				25236FE81F945E420064117E /* JCNavigationController.m in Sources */,
@@ -1184,6 +1291,7 @@
 				2518178F1FD150F80092BBEA /* JCChainViewController.m in Sources */,
 				25B46C121F9856F00026AFAD /* NSDictionary+JCBlock.m in Sources */,
 				25B46C151F9856F00026AFAD /* NSInvocation+JCInvocation.m in Sources */,
+				25F6136D1FE9454000E58B2D /* JCChain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1307,6 +1415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = JCKitDemo/Support/JCKitDemoPCH.pch;
 				INFOPLIST_FILE = JCKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1320,6 +1429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = JCKitDemo/Support/JCKitDemoPCH.pch;
 				INFOPLIST_FILE = JCKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

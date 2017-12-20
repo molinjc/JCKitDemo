@@ -1,13 +1,3 @@
-//
-//  JCCategoryKit.h
-//  JCCategoryKit
-//
-//  Created by molin.JC on 2017/6/11.
-//  Copyright © 2017年 molin. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
-
 /** UI */
 #import "UIScreen+JCScreen.h"
 #import "UITabBarController+JCTabBarController.h"
@@ -37,6 +27,8 @@
 #import "UITableView+JCPlaceholder.h"
 #import "UIBarItem+JCBarItem.h"
 #import "UIViewController+JCViewController.h"
+#import "CADisplayLink+JCToRunLoop.h"
+#import "UIWebView+JCProgress.h"
 
 /** NS */
 #import "NSBundle+JCBundle.h"

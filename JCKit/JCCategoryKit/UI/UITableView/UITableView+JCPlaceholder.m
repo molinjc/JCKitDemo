@@ -20,7 +20,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         
-        self.backgroundColor = [UIColor colorWithRed:231/255.0 green:231/255.0 blue:231/255.0 alpha:1];
+        self.backgroundColor = _RGB16(0xf5f5f5);
         self.alpha = 1;
         
         _contentView = UIView.new;

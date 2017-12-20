@@ -54,7 +54,8 @@ typedef NS_ENUM(NSUInteger, JCGradientDirection) {
 - (UIImage *)imageWithTintColor:(UIColor *)tintColor;
 /** 同上, 根据原图颜色梯度更改 */
 - (UIImage *)imageWithGradientTintColor:(UIColor *)tintColor;
-
+/** 生成一张纯色的图片, size默认{100, 100} */
++ (UIImage *)imageWithColor:(UIColor *)color;
 /** 生成一张纯色的图片 */
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 
@@ -120,7 +121,8 @@ typedef NS_ENUM(NSUInteger, JCGradientDirection) {
 
 /** 设置图片方向 */
 - (UIImage *)orientation:(UIImageOrientation)orientation;
-
+/** 设置图片的方向为UIImageOrientationUp */
+- (UIImage *)orientationUp;
 /** 水平翻转 */
 - (UIImage *)flipHorizontal;
 
@@ -178,12 +180,17 @@ typedef NS_ENUM(NSUInteger, JCGradientDirection) {
 
 @interface UIImage (JCQRCode)
 
+/** 生成二维码图片 */
++ (UIImage *)QRCodeImageWithString:(NSString *)string size:(CGFloat)size;
+
 /**
  生成二维码图片
  @param string 信息
  @param size 大小
+ @param image 二维码中间的图片
+ @return 二维码图
  */
-+ (UIImage *)QRCodeImageWithString:(NSString *)string size:(CGFloat)size;
++ (UIImage *)QRCodeImageWithString:(NSString *)string size:(CGFloat)size image:(UIImage *)image;
 
 /** 二维码图片内容信息 */
 - (NSString *)QRCodeImageContext;

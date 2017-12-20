@@ -24,7 +24,7 @@
 @property (nonatomic, weak, readonly) UINavigationController *(^navigationBarTransparentBackground)(void);
 
 /** 隐藏navigationBar下的横线 */
-@property (nonatomic, weak, readonly) UINavigationController *(^navigationBarHiddenLine)(void);
+@property (nonatomic, weak, readonly) UINavigationController *(^navigationBarHiddenLine)(BOOL);
 
 /** navigationBar的透明渐变 */
 @property (nonatomic, weak, readonly) UINavigationController *(^navigationBarTransparentGradient)(CGFloat alpha);

@@ -7,7 +7,7 @@
 //
 
 #import "JCChainViewController.h"
-#import "UIView+JCChain.h"
+#import "JCChain.h"
 
 @interface JCView : UIView
 @end
@@ -15,6 +15,7 @@
 @end
 
 @interface JCChainViewController ()
+@property (nonatomic, strong) UIView *view1;
 @end
 
 @implementation JCChainViewController
@@ -25,29 +26,35 @@
 }
 
 - (void)_initView {
-    UILabel *label = UILabel.init.setBackgroundColor([UIColor waterPink]).setFont([UIFont systemFontOfSize:13]).setTextColor([UIColor floralWhite]).setTextAlignment(NSTextAlignmentCenter).setText(@"测试链式编程");
-    label.frame = CGRectMake(0, self.navigationHeight, self.view.width, 20);
+    UILabel *label = [UILabel new];
+    label.chain.textAlignment(NSTextAlignmentRight).bgColor([UIColor waterPink]).font([UIFont systemFontOfSize:13]).textColor([UIColor floralWhite]).frame(CGRectMake(0, self.navigationHeight, self.view.width, 20)).text(@"测试链式编程??????");
     [self.view addSubview:label];
     
-    UITextField *textField = UITextField.init.setBackgroundColor([UIColor rosyBrown]).setFont([UIFont systemFontOfSize:15]).setTextColor([UIColor waterPink]);
+    UITextField *textField = UITextField.new;
+    textField.chain.bgColor([UIColor rosyBrown]).font([UIFont systemFontOfSize:15]).textColor([UIColor waterPink]);
     textField.frame = CGRectMake(20, label.bottom + 10, self.view.width - 40, 40);
     [self.view addSubview:textField];
     
-    UIButton *button = UIButton.buttonType(UIButtonTypeRoundedRect).addTarget(self, @selector(buttonAction:), UIControlEventTouchUpInside).setTitle(@"按钮");
-    button.backgroundColor = [UIColor goldenrod];
-    button.frame = CGRectMake(100, textField.bottom + 10, self.view.width - 200, 45);
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.chain.bgColor([UIColor goldenrod]).title(@"按钮").frame(CGRectMake(100, textField.bottom + 10, self.view.width - 200, 45));
+    [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
-    JCView *view = JCView.init;
-    view.setBackgroundColor([UIColor waterPink]);
+    JCView *view = JCView.new;
+    view.chain.bgColor([UIColor waterPink]);
     [self.view addSubview:view];
-//    UITableView *tableView = UITableView.init.setBackgroundColor(UIColor.waterPink).setRowHeight(20);
+    
+    _view1 = [UIView new];
+    _view1.tag = 20003;
+    _view1.chain.bgColor([UIColor waterPink]).origin(CGPointMake(10, button.bottom + 10)).size(CGSizeMake(100, 100));    
+    self.view.chain.addSubview(_view1);
 }
 
 #pragma mark - action
 
 - (void)buttonAction:(UIButton *)sender {
     JCLog(@"点击了<%@>", sender);
+    _view1.chain.hidden(!_view1.hidden);
 }
 
 @end

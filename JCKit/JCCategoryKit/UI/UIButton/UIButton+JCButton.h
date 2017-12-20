@@ -36,6 +36,8 @@ typedef NS_ENUM(NSInteger, ButtonImageTitleStyle ) {
 @property (nonatomic, weak, readonly) UIButton *(^titleColorOrStateSet)(UIColor *,UIControlState);
 /** 设置字体大小 */
 @property (nonatomic, weak, readonly) UIButton *(^fontSize)(CGFloat);
+/** 设置字体 */
+@property (nonatomic, weak, readonly) UIButton *(^fontSet)(UIFont *);
 /** 设置标题富文本的样式 */
 @property (nonatomic, weak, readonly) UIButton *(^attributedTitleSet)(NSAttributedString *);
 /** 设置标题富文本的样式和状态 */

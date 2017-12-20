@@ -25,9 +25,7 @@ typedef NS_ENUM(NSInteger, JCSeparatorStyle) {
 
 @property (nonatomic, assign) CGFloat rightSpacing;
 
-/**
- 被选中是否反应, 对应selectionStyle，NO相当于UITableViewCellSelectionStyleNone
- */
+/** 被选中是否反应, 对应selectionStyle，NO相当于UITableViewCellSelectionStyleNone */
 @property (nonatomic, readwrite) BOOL selectionReaction;
 
 @end
